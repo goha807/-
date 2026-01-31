@@ -1,0 +1,21 @@
+<input id="name" placeholder="Імʼя персонажа">
+<button onclick="reg()">Створити</button>
+
+<script src="script.js"></script>
+<script>
+function reg() {
+  const name = document.getElementById("name").value.trim();
+  if (!name) return alert("Введи імʼя!");
+
+  const player = {
+    name,
+    money: 1000,
+    level: 1,
+    xp: 0,
+    job: "Безробітний"
+  };
+
+  savePlayer(player);
+  location.href = "profile.html";
+}
+</script>

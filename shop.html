@@ -1,0 +1,16 @@
+<script src="script.js"></script>
+<script>checkPlayer();</script>
+
+<h2>Магазин</h2>
+<button onclick="buy()">Телефон — 500$</button>
+
+<script>
+function buy() {
+  let p = getPlayer();
+  if (p.money < 500) return alert("Недостатньо грошей!");
+
+  p.money -= 500;
+  savePlayer(p);
+  alert("Куплено!");
+}
+</script>

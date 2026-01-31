@@ -1,0 +1,29 @@
+<script src="script.js"></script>
+<script>checkPlayer();</script>
+
+<h2>Робота</h2>
+<button onclick="work()">Працювати</button>
+
+<script>
+let cooldown = false;
+
+function work() {
+  if (cooldown) return alert("Зачекай!");
+
+  cooldown = true;
+  setTimeout(() => cooldown = false, 5000);
+
+  let p = getPlayer();
+  p.money += 300;
+  p.xp += 1;
+
+  if (p.xp >= 5) {
+    p.level++;
+    p.xp = 0;
+    alert("🎉 Новий рівень!");
+  }
+
+  savePlayer(p);
+  alert("+300$");
+}
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Life City RP</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏙️ Life City RP</h1>
+<p>Текстовий RP-проєкт</p>
+<button onclick="go()">Увійти</button>
+
+<script src="script.js"></script>
+<script>
+function go() {
+  if (localStorage.getItem("player")) {
+    location.href = "profile.html";
+  } else {
+    location.href = "register.html";
+  }
+}
+</script>
+</body>
+</html>

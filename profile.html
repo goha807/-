@@ -1,0 +1,19 @@
+<script src="script.js"></script>
+<script>checkPlayer();</script>
+
+<h2>Профіль</h2>
+<div id="info"></div>
+
+<button onclick="location.href='work.html'">Робота</button>
+<button onclick="location.href='shop.html'">Магазин</button>
+<button onclick="location.href='admin.html'">Адмін</button>
+
+<script>
+const p = getPlayer();
+document.getElementById("info").innerHTML = `
+<b>${p.name}</b><br>
+💰 ${p.money}$<br>
+⭐ Рівень: ${p.level}<br>
+🧰 Робота: ${p.job}
+`;
+</script>
